@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import {v4 as uuidv4} from 'uuid'
+
 import ContactItem from './components/ContactItem'
 
 import './App.css'
@@ -52,8 +53,11 @@ class App extends Component {
       mobileNo,
       isFavorite: false,
     }
+
     this.setState(prevState => ({
       contactsList: [...prevState.contactsList, newContact],
+      name: '',
+      mobileNo: '',
     }))
   }
 
